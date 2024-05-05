@@ -14,11 +14,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="shadow-xl fixed w-full">
-      <div className="max-w-[1240px] mx-auto flex justify-between items-center h-20 px-4 md:px-0 text-white">
+    <div className="shadow-xl w-full fixed">
+      <div className="mx-[5.1%] flex justify-between items-center h-16 md:h-20 px-4 md:px-0 text-white">
         {/* Logo */}
         <div>
-          <h2 className="text-text text-[24px] md:text-[32px] lg:text-[40px] font-medium">
+          <h2 className="text-text text-[24px] md:text-[32px] lg:text-[36px] font-medium">
             Rahman&apos;<span className="text-primary">S</span> Portfolio
           </h2>
         </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
         >
           {/* Mobile Logo */}
           <div className="mb-[8px]">
-            <h2 className="text-text text-[24px] md:text-[32px] lg:text-[40px] font-medium">
+            <h2 className="text-text text-[24px] md:text-[32px] lg:text-[36px] font-medium">
               Rahman&apos;<span className="text-primary">S</span> Portfolio
             </h2>
           </div>

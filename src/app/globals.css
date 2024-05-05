@@ -2,4 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.heading_text {
+    @apply text-text text-[24px] md:text-[32px] lg:text-[36px] font-medium
+}
 
+.desc_text {
+    @apply text-text-gray text-[16px] md:text-[17px]
+}
+
+.custom_button {
+    @apply shadow-md font-semibold px-[20px] py-[12px] uppercase text-[16px] md:text-[17px] rounded-lg cursor-pointer border-b-2 border-primary
+}
