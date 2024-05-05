@@ -1,7 +1,6 @@
 import LottieShow from "@/components/ui/LottieShow";
 import TypeContent from "@/components/ui/TypeContent";
 import { LiaDownloadSolid } from "react-icons/lia";
-// import RESUMEPDF from "/resume.pdf";
 
 const Banner = () => {
   return (
@@ -22,7 +21,7 @@ const Banner = () => {
 
         <span className="mt-[12px]">
           <a
-            //   href={RESUMEPDF}
+            href="/resume.pdf"
             className="custom_button"
             download="resume_of_abdur_rahman"
           >
