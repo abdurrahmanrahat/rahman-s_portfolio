@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const LoadingPage = () => {
   return (
-    <div className="w-[90%] mx-auto">
+    <div className="w-[90%] mx-auto pt-[80px] md:pt-[120px]">
       <Image
         src="https://i.stack.imgur.com/hzk6C.gif"
         width={500}
