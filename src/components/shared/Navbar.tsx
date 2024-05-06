@@ -26,7 +26,9 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex justify-center gap-[20px] lg:gap-[24px] text-text text-[19px] lg:text-[20px]">
           <li>
-            <ActiveLink href="/">Home</ActiveLink>
+            <ActiveLink href="/" exact={true}>
+              Home
+            </ActiveLink>
           </li>
           <li>
             <ActiveLink href="/about">About</ActiveLink>
@@ -61,7 +63,9 @@ const Navbar = () => {
 
           <ul className="space-y-[4px]">
             <li>
-              <ActiveLink href="/">Home</ActiveLink>
+              <ActiveLink href="/" exact={true}>
+                Home
+              </ActiveLink>
             </li>
             <li>
               <ActiveLink href="/about">About</ActiveLink>
