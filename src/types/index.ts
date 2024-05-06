@@ -13,3 +13,12 @@ export type TProject = {
   githubClient: string;
   githubServer: string;
 };
+
+export type TBlog = {
+  _id: string;
+  image: string;
+  title: string;
+  desc: string;
+  date: string;
+  readTime: string;
+};

@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "01",
+    "image": "https://i.ibb.co/1dPhZXV/react.png",
+    "title": "New Features in React 19",
+    "desc": "ReactJS is one of the most popular UI libraries in the front-end development world. And one of the reasons I love React is because of the team behind it and the community's enthusiasm for it. And when the community speaks up about the need for new features and improvements, the team listens. The future of React is exciting and interesting. If I had to summarise it in one line, I'd say this pretty much sums it up: 'Write Less, Do More. In this article, I will share what's new in React 19 so you can start experimenting with some of the features and learn about what's changing. Just keep in mind that as I write this, React 19 is still work in progress. Make sure you follow the official guide on GitHub and the official team on social media to stay updated with the latest developments.",
+    "date": "22/03/2024",
+    "readTime": "8 Min Read"
+  },
+  {
+    "_id": "02",
+    "image": "https://i.ibb.co/4Ym41cd/next.webp",
+    "title": "Deploy Next.js to Azure",
+    "desc": "Are you considering using Azure to deploy your Next.js application, or looking for ways to leverage Azure’s robust features for your existing projects? This article will guide you through various methods to deploy your Next.js application using different Azure resources and GitHub Actions. You’ll explore deployment strategies that include direct code deployment and containerization. By deploying on Azure, you gain access to essential features like scalability, enhanced security, and seamless integration with other Azure services. Whether you’re new to Azure or looking to optimize your application deployment, this guide provides practical insights into making the most of Azure’s capabilities to boost your application’s performance and reliability.",
+    "date": "29/03/2024",
+    "readTime": "7 Min Read"
+  },
+  {
+    "_id": "01",
+    "image": "https://i.ibb.co/PWvhYq4/code.webp",
+    "title": "Programming lifestyle",
+    "desc": "It really depends on the situation! In React.js or Next.js, you have the option to choose between Boilerplate or Atomic state management, depending on the project, team, complicity, etc. My experience has led me to choose Atomic State Management. We were able to develop each page/directory independently without being dependent on other parts of the project. Here is an example of what I mean by “zero dependency on other parts”.",
+    "date": "26/04/2024",
+    "readTime": "5 Min Read"
+  }
+]

@@ -16,7 +16,7 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <div className="mx-[5.1%] pt-[80px] md:pt-[120px]">
+    <div className="mx-[5.1%] py-[80px] md:py-[120px]">
       {/* <div className="text-center">
         <span className="text-[24px] font-semibold uppercase border-b-2 border-primary">
           Projects

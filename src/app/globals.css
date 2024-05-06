@@ -18,3 +18,10 @@
 .custom-shadow {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+/* articles image hover effect */
+.parent_card:hover .main-banner img {
+    -webkit-filter: brightness(0.5);
+    -moz-filter: brightness(0.5);
+    filter: brightness(0.5);
+}
