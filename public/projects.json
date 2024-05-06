@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "01",
+    "projectName": "Food Distribution",
+    "projectImage": "https://i.ibb.co/HV6xjJK/foos-distribution.jpg",
+    "shortDesc": "Food Distribution and Supplies Management System using React, Redux for state management, RTK Query for efficient data fetching, and React Router DOM for navigation.",
+    "features": {
+      "one": "Home page with a navbar & banner slide with SwiperJs as well as more sections like Discover, Food Supplies and Gallery as well as Testimonials.",
+      "two": "User registration and login functionality and Redux toolkit. Users can donate their own food and make community here.",
+      "three": "Dashboard panel visualize with Charts and CRUD operation with food and people can make review from their"
+    },
+    "technology": "React.js, Redux, TypeScript, Tailwind.css, Sonner, Express.js, and Mongodb",
+    "liveLink": "https://food-supply.netlify.app/",
+    "githubClient": "https://github.com/abdurrahmanrahat/food-supply",
+    "githubServer": "https://github.com/abdurrahmanrahat/food-supply-server"
+  },
+  {
+    "_id": "02",
+    "projectName": "Grocery Store",
+    "projectImage": "https://i.ibb.co/gTQQm5G/fish-mart.jpg",
+    "shortDesc": "Grocery Store project aims to elevate user engagement and functionality using Next.js, Redux, Material Ui and more with shopping experience with customer satisfaction.",
+    "features": {
+      "one": "Home page with a navbar & a banner slide with SwiperJs animate as well as more section like Trending products, Category with aos and Fish route.",
+      "two": "Products list with filtering option via price range, brand and rating & also can add to cart products then purchase from checkout page.",
+      "three": "In Dashboard, admin can post fish products, can manage orders and user can see their orders progress in the my orders route"
+    },
+    "technology": "Next.js, Redux, TypeScript, Tailwind.css, Node.js, Express.js, and Mongodb",
+    "liveLink": "https://grocery-store-fronted.vercel.app/",
+    "githubClient": "https://github.com/abdurrahmanrahat/grocery-store",
+    "githubServer": "https://github.com/abdurrahmanrahat/grocery-store-server"
+  },
+  {
+    "_id": "03",
+    "projectName": "Job Recruiting-(Team Project)",
+    "projectImage": "https://i.ibb.co/xH3hDZL/job-Linker.jpg",
+    "shortDesc": "With its user roles, data storage capabilities, and administrative functions, JobLinker simplifies job search and hiring process. It provides an effective solution for both.",
+    "features": {
+      "one": "Homepage with a banner, featured jobs, find seekers, blog, contact form and footer with some info. And also has some routes in Navbar.",
+      "two": "After login, users can select their role whether he or she is HR or Job Seeker then they can post as their role. then post data will go in Mongodb.",
+      "three": "In Dashboard, All will see their post specifically for manageing and here admin has various types of power to manage whole website."
+    },
+    "technology": "Next JS, Tailwind CSS with DaisyUI, Firebase, Toast, MongoDB, Git collaborate & Vercel",
+    "liveLink": "https://job-linker-seven.vercel.app/",
+    "githubClient": "https://github.com/Galib24/JobLinker",
+    "githubServer": "https://github.com/Galib24/JobLinker-server"
+  }
+]

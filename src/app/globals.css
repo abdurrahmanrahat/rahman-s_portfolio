@@ -11,5 +11,10 @@
 }
 
 .custom_button {
-    @apply shadow-md font-semibold px-[20px] py-[12px] uppercase text-[16px] md:text-[17px] rounded-lg cursor-pointer border-b-2 border-primary
+    @apply custom-shadow font-semibold px-[20px] py-[12px] uppercase text-[16px] md:text-[17px] rounded-lg cursor-pointer border-b-2 border-primary
+}
+
+/* box-shadow */
+.custom-shadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

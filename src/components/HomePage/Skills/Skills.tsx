@@ -2,7 +2,7 @@ const Skills = () => {
   return (
     <div className="mx-[5.1%] md:mx-[10.2%] mt-[80px] md:mt-0">
       <div className="text-center">
-        <span className="text-[20px] font-semibold uppercase border-b-2 border-primary">
+        <span className="text-[24px] font-semibold uppercase border-b-2 border-primary">
           Skills
         </span>
       </div>
@@ -18,11 +18,7 @@ const Skills = () => {
           <div className="space-y-[8px]">
             <div>
               <p className="-mb-2 text-text-gray">React.js</p>
-              <progress
-                className="progress text-[#FB923C]"
-                value="92"
-                max="100"
-              ></progress>
+              <progress className="progress" value="92" max="100"></progress>
             </div>
             <div>
               <p className="-mb-2 text-text-gray">Redux</p>
