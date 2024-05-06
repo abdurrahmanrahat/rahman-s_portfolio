@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="mx-[5.1%] flex justify-between items-center h-16 md:h-20">
         {/* Logo */}
         <div>
-          <h2 className="text-text text-[24px] md:text-[32px] lg:text-[36px] font-medium">
+          <h2 className="text-text text-[20px] md:text-[32px] lg:text-[36px] font-medium">
             Rahman&apos;<span className="text-primary">S</span> Portfolio
           </h2>
         </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
         >
           {/* Mobile Logo */}
           <div className="mb-[8px]">
-            <h2 className="text-text text-[24px] md:text-[32px] lg:text-[36px] font-medium">
+            <h2 className="text-text text-[20px] md:text-[32px] lg:text-[36px] font-medium">
               Rahman&apos;<span className="text-primary">S</span> Portfolio
             </h2>
           </div>
