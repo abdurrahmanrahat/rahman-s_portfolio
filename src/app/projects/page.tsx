@@ -17,11 +17,16 @@ const ProjectsPage = () => {
 
   return (
     <div className="mx-[5.1%] py-[80px] md:py-[120px]">
-      {/* <div className="text-center">
-        <span className="text-[24px] font-semibold uppercase border-b-2 border-primary">
-          Projects
-        </span>
-      </div> */}
+      {/* title section */}
+      <div className="relative w-full h-auto py-[20px] flex items-center gap-5">
+        <h3 className="inline-flex items-center text-[20px] font-medium">
+          Latest{" "}
+          <span className="text-[14px] font-light ml-[10px] opacity-80">
+            Projects
+          </span>
+        </h3>
+        <i className="relative w-full h-[1px] bg-text-gray"></i>
+      </div>
 
       {/* show projects */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[40px] mt-[40px]">

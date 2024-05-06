@@ -31,6 +31,21 @@
   },
   {
     "_id": "03",
+    "projectName": "E-commerce",
+    "projectImage": "https://i.ibb.co/qR1ycdZ/device-market.jpg",
+    "shortDesc": "In Device Market, users can see home page with some sections and also see products for purchasing with stripe payment. Also has Products and Sellers route. Admin can make a buyer to a seller so that sellers can upload their products in Device Market.",
+    "features": {
+      "one": "Homepage with a carousel banner, feature, top products, gallery, with top sellers and blogs as well as sellers can upload their products for selling.",
+      "two": "Also has a login button, so that users can login with their role & buyer can add to cart products. After selecting, buyers will pay for it via Stripe.",
+      "three": "Also has Products and Sellers route. In Dashboard, users and all content of the site is managed from there by admin."
+    },
+    "technology": "React.js, Tailwind.css, Firebase, Toast, Stripe, Express.js and Mongodb",
+    "liveLink": "https://buy-sale-mern.web.app/",
+    "githubClient": "https://github.com/abdurrahmanrahat/buy-sale-client",
+    "githubServer": "https://github.com/abdurrahmanrahat/buy-sale-server"
+  },
+  {
+    "_id": "04",
     "projectName": "Job Recruiting",
     "projectImage": "https://i.ibb.co/xH3hDZL/job-Linker.jpg",
     "shortDesc": "With its user roles, data storage capabilities, and administrative functions, JobLinker simplifies job search and hiring process. It provides an effective solution for both.",
@@ -39,7 +54,7 @@
       "two": "After login, users can select their role whether he or she is HR or Job Seeker then they can post as their role. then post data will go in Mongodb.",
       "three": "In Dashboard, All will see their post specifically for manageing and here admin has various types of power to manage whole website."
     },
-    "technology": "Next JS, Tailwind CSS with DaisyUI, Firebase, Toast, MongoDB, Git collaborate & Vercel",
+    "technology": "Next.js, Tailwind.css, Firebase, Toast, Mongodb, Git collaborate & Vercel",
     "liveLink": "https://job-linker-seven.vercel.app/",
     "githubClient": "https://github.com/Galib24/JobLinker",
     "githubServer": "https://github.com/Galib24/JobLinker-server"

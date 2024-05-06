@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import ActiveLink from "../ui/ActiveLink";
@@ -17,11 +18,11 @@ const Navbar = () => {
     <div className="shadow-xl w-full fixed z-[999] bg-white">
       <div className="mx-[5.1%] flex justify-between items-center h-16 md:h-20">
         {/* Logo */}
-        <div>
+        <Link href={"/"}>
           <h2 className="text-text text-[20px] md:text-[32px] lg:text-[36px] font-medium">
             Rahman&apos;<span className="text-primary">S</span> Portfolio
           </h2>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex justify-center gap-[20px] lg:gap-[24px] text-text text-[19px] lg:text-[20px]">

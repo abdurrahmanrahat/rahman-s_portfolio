@@ -15,7 +15,7 @@ const BlogsPage = () => {
       .then((data) => setBlogs(data));
   }, []);
 
-  console.log(blogs);
+  //   console.log(blogs);
   return (
     <div className="mx-[5.1%] py-[80px] md:py-[120px]">
       {/* title section */}
