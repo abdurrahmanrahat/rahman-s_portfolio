@@ -7,7 +7,6 @@ import MYTextArea from "@/components/Forms/MYTextArea";
 import { FieldValues } from "react-hook-form";
 
 const image_hoisting_token = process.env.NEXT_PUBLIC_imgBB_token;
-console.log(image_hoisting_token);
 
 const AddArticle = () => {
   const img_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hoisting_token}`;

@@ -19,6 +19,7 @@ const MYTextArea = ({ name, placeholder, rows }: TInputProps) => {
           placeholder={placeholder}
           rows={rows}
           className="w-full px-3 py-3 bg-[#EEEEF2] rounded-md focus:outline-none"
+          required
         ></textarea>
       )}
     />
