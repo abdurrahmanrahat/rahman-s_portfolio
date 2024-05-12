@@ -20,11 +20,7 @@ const Banner = () => {
         </p>
 
         <span className="mt-[12px]">
-          <a
-            href="/resume.pdf"
-            className="custom_button"
-            download="resume_of_abdur_rahman"
-          >
+          <a href="/resume.pdf" className="custom_button" download>
             Resume <LiaDownloadSolid className="inline-flex font-bold" />
           </a>
         </span>
