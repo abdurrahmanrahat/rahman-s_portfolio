@@ -3,10 +3,10 @@ import { baseApi } from "./baseApi";
 const articlesApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     createArticleIntoDb: build.mutation({
-      query: (cartFishes) => ({
+      query: (article) => ({
         url: "/articles/create-article",
         method: "POST",
-        body: cartFishes,
+        body: article,
       }),
       invalidatesTags: ["article"],
     }),

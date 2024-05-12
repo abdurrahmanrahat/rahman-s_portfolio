@@ -3,10 +3,10 @@ import { baseApi } from "./baseApi";
 const skillsApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     createSkillIntoDb: build.mutation({
-      query: (cartFishes) => ({
+      query: (skill) => ({
         url: "/skills/create-skill",
         method: "POST",
-        body: cartFishes,
+        body: skill,
       }),
       invalidatesTags: ["skill"],
     }),
