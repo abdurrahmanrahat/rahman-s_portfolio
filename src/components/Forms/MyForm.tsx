@@ -15,7 +15,7 @@ type TFormProps = {
   onSubmit: SubmitHandler<FieldValues>;
 } & TFormConfig;
 
-const MyForm = ({ children, onSubmit, defaultValues }: TFormProps) => {
+const MYForm = ({ children, onSubmit, defaultValues }: TFormProps) => {
   const formConfig: TFormConfig = {};
   if (defaultValues) {
     formConfig["defaultValues"] = defaultValues;
@@ -36,4 +36,4 @@ const MyForm = ({ children, onSubmit, defaultValues }: TFormProps) => {
   );
 };
 
-export default MyForm;
+export default MYForm;
