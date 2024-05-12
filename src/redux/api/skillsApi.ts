@@ -4,7 +4,7 @@ const skillsApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     createSkillIntoDb: build.mutation({
       query: (cartFishes) => ({
-        url: "/orders",
+        url: "/skills/create-skill",
         method: "POST",
         body: cartFishes,
       }),
@@ -13,7 +13,7 @@ const skillsApi = baseApi.injectEndpoints({
 
     getAllSkillsFromDb: build.query({
       query: (arg: Record<string, any>) => ({
-        url: "/orders",
+        url: "/skills",
         method: "GET",
         params: arg,
       }),
