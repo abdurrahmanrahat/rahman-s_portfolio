@@ -1,4 +1,3 @@
-import Navbar from "@/components/shared/Navbar";
 import Providers from "@/lib/Providers/Providers";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
@@ -24,7 +23,6 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <Providers>
         <body className={roboto.className}>
-          <Navbar />
           <div className="min-h-screen">{children}</div>
         </body>
       </Providers>
