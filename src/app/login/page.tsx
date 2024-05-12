@@ -2,11 +2,32 @@
 
 import MYForm from "@/components/Forms/MYForm";
 import MYInput from "@/components/Forms/MYInput";
+import { useLoginMutation } from "@/redux/api/authApi";
+import { setUser } from "@/redux/features/authSlice";
+import { useAppDispatch } from "@/redux/hooks";
+import { verifyToken } from "@/utils/verifyToken";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
+  const router = useRouter();
+  const dispatch = useAppDispatch();
+
+  const [login] = useLoginMutation();
+
   const handleLogin = async (values: any) => {
     console.log(values);
+    try {
+      const res = await login(values).unwrap();
+      console.log("res", res);
+      const user = verifyToken(res.token);
+
+      dispatch(setUser({ user, token: res.token }));
+
+      router.push("/");
+    } catch (error) {
+      console.log("error from catch", error);
+    }
   };
 
   return (
