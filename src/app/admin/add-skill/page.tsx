@@ -2,11 +2,23 @@
 
 import MYForm from "@/components/Forms/MYForm";
 import MYInput from "@/components/Forms/MYInput";
+import { useCreateSkillIntoDbMutation } from "@/redux/api/skillsApi";
 import { FieldValues } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const AddSkill = () => {
-  const handleAddSkill = (values: FieldValues) => {
-    console.log(values);
+  const [createSkillIntoDb] = useCreateSkillIntoDbMutation();
+
+  const handleAddSkill = async (values: FieldValues) => {
+    try {
+      const res = await createSkillIntoDb(values).unwrap();
+
+      if (res.success) {
+        toast.success(res?.message);
+      }
+    } catch (error: any) {
+      console.error(error.message);
+    }
   };
 
   return (

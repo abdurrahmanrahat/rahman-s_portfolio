@@ -4,11 +4,13 @@ import MYFileUploader from "@/components/Forms/MYFileUploader";
 import MYForm from "@/components/Forms/MYForm";
 import MYInput from "@/components/Forms/MYInput";
 import MYTextArea from "@/components/Forms/MYTextArea";
+import { useCreateProjectIntoDbMutation } from "@/redux/api/projectsApi";
 import { FieldValues } from "react-hook-form";
+import toast from "react-hot-toast";
 
 export const defaultProjectValue = {
   projectName: "",
-  projectImage: "",
+  projectImage: null,
   shortDesc: "",
   features: {
     one: "",
@@ -26,6 +28,8 @@ const image_hoisting_token = process.env.NEXT_PUBLIC_imgBB_token;
 const AddProject = () => {
   const img_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hoisting_token}`;
 
+  const [createProjectIntoDb] = useCreateProjectIntoDbMutation();
+
   const handleAddProject = (values: FieldValues) => {
     const formData = new FormData();
     formData.append("image", values.projectImage);
@@ -35,12 +39,24 @@ const AddProject = () => {
       body: formData,
     })
       .then((res) => res.json())
-      .then((imgResponse) => {
+      .then(async (imgResponse) => {
         if (imgResponse.success) {
           const image = imgResponse.data.display_url;
 
           values.projectImage = image;
           console.log(values);
+
+          // send to db
+          try {
+            const res = await createProjectIntoDb(values).unwrap();
+            console.log(res);
+
+            if (res.success) {
+              toast.success(res?.message);
+            }
+          } catch (error: any) {
+            console.error(error.message);
+          }
         }
       });
   };

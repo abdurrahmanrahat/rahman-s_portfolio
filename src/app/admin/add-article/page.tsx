@@ -4,7 +4,9 @@ import MYFileUploader from "@/components/Forms/MYFileUploader";
 import MYForm from "@/components/Forms/MYForm";
 import MYInput from "@/components/Forms/MYInput";
 import MYTextArea from "@/components/Forms/MYTextArea";
+import { useCreateArticleIntoDbMutation } from "@/redux/api/articlesApi";
 import { FieldValues } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const image_hoisting_token = process.env.NEXT_PUBLIC_imgBB_token;
 
@@ -14,7 +16,9 @@ const AddArticle = () => {
   const date = new Date();
   const formattedDate = date.toLocaleDateString("en-GB");
 
-  const handleAddArticle = (values: FieldValues) => {
+  const [createArticleIntoDb] = useCreateArticleIntoDbMutation();
+
+  const handleAddArticle = async (values: FieldValues) => {
     const readTimeCount =
       values.desc.length > 400
         ? "9 Min Read"
@@ -30,7 +34,7 @@ const AddArticle = () => {
       body: formData,
     })
       .then((res) => res.json())
-      .then((imgResponse) => {
+      .then(async (imgResponse) => {
         if (imgResponse.success) {
           const image = imgResponse.data.display_url;
 
@@ -42,6 +46,16 @@ const AddArticle = () => {
             date: formattedDate,
             readTime: readTimeCount,
           };
+
+          try {
+            const res = await createArticleIntoDb(newArticle).unwrap();
+
+            if (res.success) {
+              toast.success(res?.message);
+            }
+          } catch (error: any) {
+            console.error(error.message);
+          }
         }
       });
   };
@@ -59,7 +73,7 @@ const AddArticle = () => {
       <MYForm
         onSubmit={handleAddArticle}
         defaultValues={{
-          image: "",
+          image: null,
           title: "",
           desc: "",
         }}

@@ -22,7 +22,7 @@
     "features": {
       "one": "Home page with a navbar & a banner slide with SwiperJs animate as well as more section like Trending products, Category with aos and Fish route.",
       "two": "Products list with filtering option via price range, brand and rating & also can add to cart products then purchase from checkout page.",
-      "three": "In Dashboard, admin can post fish products, can manage orders and user can see their orders progress in the my orders route"
+      "three": "In Dashboard, admin can post fish products, can manage orders and user can see their orders progress in the my orders route."
     },
     "technology": "Next.js, Redux, TypeScript, Tailwind.css, Node.js, Express.js, and Mongodb",
     "liveLink": "https://grocery-store-fronted.vercel.app/",
