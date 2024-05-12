@@ -2,11 +2,32 @@
 
 import MYForm from "@/components/Forms/MYForm";
 import MYInput from "@/components/Forms/MYInput";
+import { useRegisterMutation } from "@/redux/api/authApi";
+import { setUser } from "@/redux/features/authSlice";
+import { useAppDispatch } from "@/redux/hooks";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { FieldValues } from "react-hook-form";
 
 const RegisterPage = () => {
-  const handleRegister = async (values: any) => {
-    console.log(values);
+  const router = useRouter();
+  const dispatch = useAppDispatch();
+
+  const [register] = useRegisterMutation();
+
+  const handleRegister = async (values: FieldValues) => {
+    values.role = "USER";
+
+    try {
+      const res = await register(values).unwrap();
+
+      if (res?.success) {
+        dispatch(setUser({ user: res.data, token: null }));
+        router.push("/");
+      }
+    } catch (error) {
+      console.log("error from catch", error);
+    }
   };
 
   return (
