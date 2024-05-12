@@ -5,7 +5,10 @@ import ActiveLink from "@/components/ui/ActiveLink";
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { BiImageAdd } from "react-icons/bi";
+import { IoMdAddCircleOutline } from "react-icons/io";
 import { LuLayoutDashboard } from "react-icons/lu";
+import { PiArticleNyTimes } from "react-icons/pi";
 
 const MobileMenu = () => {
   const [toggle, setToggle] = useState(false);
@@ -55,6 +58,39 @@ const MobileMenu = () => {
               <div className="flex items-center gap-2">
                 <LuLayoutDashboard className="text-[18px]" />
                 <span className="truncate">Dashboard</span>
+              </div>
+            </ActiveLink>
+          </div>
+          <div
+            className="font-semibold text-[14px] md:text-[17px] 2xl:text-[18px] hover:text-primary transition-all duration-500"
+            onClick={handleNavToggle}
+          >
+            <ActiveLink exact href="/admin/add-skill">
+              <div className="flex items-center gap-2">
+                <IoMdAddCircleOutline className="text-[18px]" />
+                <span className="truncate">Add Skill</span>
+              </div>
+            </ActiveLink>
+          </div>
+          <div
+            className="font-semibold text-[14px] md:text-[17px] 2xl:text-[18px] hover:text-primary transition-all duration-500"
+            onClick={handleNavToggle}
+          >
+            <ActiveLink exact href="/admin/add-project">
+              <div className="flex items-center gap-2">
+                <BiImageAdd className="text-[18px]" />
+                <span className="truncate">Add Project</span>
+              </div>
+            </ActiveLink>
+          </div>
+          <div
+            className="font-semibold text-[14px] md:text-[17px] 2xl:text-[18px] hover:text-primary transition-all duration-500"
+            onClick={handleNavToggle}
+          >
+            <ActiveLink exact href="/admin/add-article">
+              <div className="flex items-center gap-2">
+                <PiArticleNyTimes className="text-[18px]" />
+                <span className="truncate">Add Article</span>
               </div>
             </ActiveLink>
           </div>

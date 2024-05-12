@@ -34,3 +34,9 @@ export type TLoginUser = {
   email: string;
   password: string;
 };
+
+export type TSkill = {
+  title: string;
+  category: string;
+  value: string;
+};
