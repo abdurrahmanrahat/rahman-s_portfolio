@@ -16,7 +16,7 @@
     "readTime": "7 Min Read"
   },
   {
-    "_id": "01",
+    "_id": "03",
     "image": "https://i.ibb.co/PWvhYq4/code.webp",
     "title": "Programming lifestyle",
     "desc": "It really depends on the situation! In React.js or Next.js, you have the option to choose between Boilerplate or Atomic state management, depending on the project, team, complicity, etc. My experience has led me to choose Atomic State Management. We were able to develop each page/directory independently without being dependent on other parts of the project. Here is an example of what I mean by “zero dependency on other parts”.",

@@ -1,12 +1,15 @@
 "use client";
 
 import ActiveLink from "@/components/ui/ActiveLink";
+import { removeUser } from "@/services/auth.services";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BiImageAdd } from "react-icons/bi";
 import { IoMdAddCircleOutline } from "react-icons/io";
+import { IoArrowUndoCircleOutline } from "react-icons/io5";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { PiArticleNyTimes } from "react-icons/pi";
 
@@ -16,6 +19,13 @@ const MobileMenu = () => {
   // Toggle function to handle the navbar's display
   const handleNavToggle = () => {
     setToggle(!toggle);
+  };
+
+  const router = useRouter();
+
+  const handleLogout = () => {
+    removeUser();
+    router.push("/");
   };
 
   return (
@@ -93,6 +103,16 @@ const MobileMenu = () => {
                 <span className="truncate">Add Article</span>
               </div>
             </ActiveLink>
+          </div>
+
+          {/* logout button */}
+          <div className="font-semibold text-[14px] md:text-[17px] 2xl:text-[18px]">
+            <div className="flex items-center gap-2 hover:text-primary transition-all duration-500 cursor-pointer">
+              <IoArrowUndoCircleOutline className="text-[18px]" />
+              <span className="truncate" onClick={handleLogout}>
+                Logout
+              </span>
+            </div>
           </div>
         </div>
       </div>

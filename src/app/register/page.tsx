@@ -16,7 +16,7 @@ const RegisterPage = () => {
 
     try {
       const res = await registerUser(values);
-      // console.log(res);
+
       if (res.success) {
         // auto login after user register
         const userRes = await loginUser({

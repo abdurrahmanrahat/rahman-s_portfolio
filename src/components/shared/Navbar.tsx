@@ -1,5 +1,6 @@
 "use client";
 
+import { getUserInfo } from "@/services/auth.services";
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -8,6 +9,9 @@ import ActiveLink from "../ui/ActiveLink";
 const Navbar = () => {
   // State to manage the navbar's visibility
   const [nav, setNav] = useState(false);
+
+  // get user info
+  const userInfo = getUserInfo();
 
   // Toggle function to handle the navbar's display
   const handleNav = () => {
@@ -40,6 +44,11 @@ const Navbar = () => {
           <li>
             <ActiveLink href="/blogs">Blogs</ActiveLink>
           </li>
+          {userInfo?.role === "ADMIN" && (
+            <li>
+              <ActiveLink href="/admin">Dashboard</ActiveLink>
+            </li>
+          )}
         </ul>
 
         {/* Mobile Navigation Icon */}

@@ -1,13 +1,12 @@
-// "use client";
+"use client";
 
 import MobileMenu from "@/components/Dashboard/shared/MobileMenu";
 import Sidebar from "@/components/Dashboard/shared/Sidebar";
-import { Metadata } from "next";
 import { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Dashboard || Portfolio of Rahman",
-};
+// export const metadata: Metadata = {
+//   title: "Dashboard || Portfolio of Rahman",
+// };
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   // const router = useRouter();
@@ -15,7 +14,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
   // const userInfo = getUserInfo();
 
   // if (!userInfo) {
-  //   return router.push("/login");
+  //   return router.push("/");
   // }
 
   return (

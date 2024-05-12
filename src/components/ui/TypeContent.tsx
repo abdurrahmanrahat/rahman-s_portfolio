@@ -16,7 +16,6 @@ const TypeContent = () => {
       showCursor: false,
       loop: true,
     });
-    console.log(typed);
   });
   return <span className="text-primary font-semibold" ref={typeRef}></span>;
 };

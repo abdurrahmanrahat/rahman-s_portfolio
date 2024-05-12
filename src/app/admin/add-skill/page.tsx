@@ -60,12 +60,8 @@ const AddSkill = () => {
           </div>
         </div>
 
-        <div className="mx-8">
-          <input
-            className="bg-text w-full rounded-md py-3 text-white cursor-pointer"
-            type="submit"
-            value="Add Skill"
-          />
+        <div className="flex justify-center items-center">
+          <input className="custom_button" type="submit" value="Add Skill" />
         </div>
       </MYForm>
     </div>

@@ -3,7 +3,6 @@ import Image from "next/image";
 import { CiCircleRemove } from "react-icons/ci";
 
 const CustomModal = ({ project }: { project: TProject }) => {
-  console.log(project);
   return (
     <div className="modal-box w-11/12 max-w-5xl">
       <form method="dialog">
