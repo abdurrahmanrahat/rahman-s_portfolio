@@ -1,19 +1,13 @@
-"use client";
-
-import CustomModal from "@/components/ui/CustomModal";
+import ProjectDetailsButton from "@/components/ui/ProjectDetailsButton";
 import { TProject } from "@/types";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { FaGithub, FaRegEye } from "react-icons/fa";
 
-const ProjectsPage = () => {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    fetch("projects.json")
-      .then((res) => res.json())
-      .then((data) => setProjects(data));
-  }, []);
+const ProjectsPage = async () => {
+  const res = await fetch(
+    "https://rahmans-portfolio-server.vercel.app/api/v1/projects"
+  );
+  const projects = await res.json();
 
   return (
     <div className="mx-[5.1%] py-[80px] md:py-[120px]">
@@ -30,7 +24,7 @@ const ProjectsPage = () => {
 
       {/* show projects */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[40px] mt-[40px]">
-        {projects?.map((project: TProject) => (
+        {projects?.data.map((project: TProject) => (
           <div
             key={project._id}
             className="custom-shadow p-[12px] rounded-lg space-y-[8px]"
@@ -73,24 +67,7 @@ const ProjectsPage = () => {
               </div>
 
               {/* details btn */}
-              <div>
-                <button
-                  className="custom-shadow font-semibold px-[16px] py-[10px] uppercase text-[14px] rounded-lg cursor-pointer border-b-2 border-primary"
-                  onClick={() =>
-                    (
-                      document.getElementById(
-                        "custom_modal"
-                      ) as HTMLDialogElement
-                    ).showModal()
-                  }
-                >
-                  Details
-                </button>
-
-                <dialog id="custom_modal" className="modal">
-                  <CustomModal project={project} />
-                </dialog>
-              </div>
+              <ProjectDetailsButton project={project} />
             </div>
           </div>
         ))}
