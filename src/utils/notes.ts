@@ -1,5 +1,7 @@
 /**
  * project details modal data fix
+ * project dynamic
+ * skill dynamic
  *
  */
 

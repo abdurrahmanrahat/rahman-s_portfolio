@@ -7,6 +7,7 @@ import { registerUser } from "@/services/actions/registerUser";
 import { storeUserInfo } from "@/services/auth.services";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const RegisterPage = () => {
   const router = useRouter();
@@ -25,7 +26,8 @@ const RegisterPage = () => {
         });
         if (userRes.success) {
           storeUserInfo({ accessToken: userRes.token });
-          router.push("/");
+          toast.success("User register successfully");
+          router.push("/admin");
         }
       }
     } catch (error: any) {

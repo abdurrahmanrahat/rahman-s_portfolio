@@ -8,7 +8,7 @@ import { useCreateProjectIntoDbMutation } from "@/redux/api/projectsApi";
 import { FieldValues } from "react-hook-form";
 import toast from "react-hot-toast";
 
-export const defaultProjectValue = {
+const defaultProjectValue = {
   projectName: "",
   projectImage: null,
   shortDesc: "",

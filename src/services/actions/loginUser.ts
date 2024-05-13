@@ -1,6 +1,7 @@
 "use server";
 
 import { TLoginUser } from "@/types";
+import { setAccessToken } from "./setAccessToken";
 
 export const loginUser = async (userData: TLoginUser) => {
   const res = await fetch(
@@ -15,6 +16,10 @@ export const loginUser = async (userData: TLoginUser) => {
     }
   );
   const userInfo = await res.json();
+
+  if (userInfo?.token) {
+    setAccessToken(userInfo.token);
+  }
 
   return userInfo;
 };

@@ -1,6 +1,7 @@
 "use client";
 
 import ActiveLink from "@/components/ui/ActiveLink";
+import { deleteCookies } from "@/services/actions/deleteCookies";
 import { removeUser } from "@/services/auth.services";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -15,6 +16,7 @@ const Sidebar = () => {
 
   const handleLogout = () => {
     removeUser();
+    deleteCookies();
     router.push("/");
   };
 

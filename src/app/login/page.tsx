@@ -6,6 +6,7 @@ import { loginUser } from "@/services/actions/loginUser";
 import { storeUserInfo } from "@/services/auth.services";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -16,7 +17,8 @@ const LoginPage = () => {
 
       if (res.success) {
         storeUserInfo({ accessToken: res.token });
-        router.push("/");
+        toast.success("User login successfully");
+        router.push("/admin");
       }
     } catch (error: any) {
       console.log(error.message);
