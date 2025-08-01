@@ -27,7 +27,7 @@ const ProjectsPage = async () => {
         {projects?.data.map((project: TProject) => (
           <div
             key={project._id}
-            className="custom-shadow p-[12px] rounded-lg space-y-[8px]"
+            className="shadow-my-shadow p-[12px] rounded-lg space-y-[8px]"
           >
             <div className="w-full h-[260px] overflow-hidden">
               <Image

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ClashDisplay', sans-serif;
+}
+
+
+
 .heading_text {
     @apply text-text text-[24px] md:text-[32px] lg:text-[36px] font-medium
 }
@@ -11,12 +20,7 @@
 }
 
 .custom_button {
-    @apply custom-shadow font-semibold px-[20px] py-[12px] uppercase text-[16px] md:text-[17px] rounded-lg cursor-pointer border-b-2 border-primary
-}
-
-/* box-shadow */
-.custom-shadow {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @apply shadow-my-shadow font-semibold px-[20px] py-[12px] uppercase text-[16px] md:text-[17px] rounded-lg cursor-pointer border-b-2 border-primary
 }
 
 /* articles image hover effect */
@@ -24,4 +28,42 @@
     -webkit-filter: brightness(0.5);
     -moz-filter: brightness(0.5);
     filter: brightness(0.5);
+}
+
+/* fonts */
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../assets/fonts/clashdisplay/ClashDisplay-Regular.woff2') format('woff2'),
+        url('../assets/fonts/clashdisplay/ClashDisplay-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../assets/fonts/clashdisplay/ClashDisplay-Medium.woff2') format('woff2'),
+        url('../assets/fonts/clashdisplay/ClashDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../assets/fonts/clashdisplay/ClashDisplay-Semibold.woff2') format('woff2'),
+        url('../assets/fonts/clashdisplay/ClashDisplay-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../assets/fonts/clashdisplay/ClashDisplay-Bold.woff2') format('woff2'),
+        url('../assets/fonts/clashdisplay/ClashDisplay-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }

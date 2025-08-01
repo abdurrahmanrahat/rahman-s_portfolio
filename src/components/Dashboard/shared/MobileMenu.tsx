@@ -32,7 +32,7 @@ const MobileMenu = () => {
 
   return (
     <div className="md:hidden relative">
-      <div className="flex justify-between px-10 py-2 custom-shadow">
+      <div className="flex justify-between px-10 py-2 shadow-my-shadow">
         <div>
           <Link onClick={() => setToggle((prev) => !prev)} href="/">
             <h1 className="text-3xl font-bold uppercase">Rahman</h1>

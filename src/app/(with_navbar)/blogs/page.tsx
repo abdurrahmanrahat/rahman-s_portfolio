@@ -44,7 +44,7 @@ const BlogsPage = () => {
             <Link
               key={blog._id}
               href={`/blogs/${blog._id}`}
-              className="parent_card relative w-full h-auto block bg-[#fff] bg-opacity-10 rounded-[20px] overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-2 custom-shadow"
+              className="parent_card relative w-full h-auto block bg-[#fff] bg-opacity-10 rounded-[20px] overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-2 shadow-my-shadow"
             >
               <div className="main-banner relative w-full h-auto">
                 <Image

@@ -37,7 +37,7 @@ const RegisterPage = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center pt-16 md:pt-20 2xl:pt-24 px-4 md:px-0">
-      <div className="w-[400px] h-auto space-y-2 rounded-md py-6 custom-shadow">
+      <div className="w-[400px] h-auto space-y-2 rounded-md py-6 shadow-my-shadow">
         <div className="text-center">
           <h2 className="heading_text mb-1">Register</h2>
           <p className="desc_text">Sign up to access</p>
