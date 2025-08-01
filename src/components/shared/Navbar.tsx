@@ -1,7 +1,10 @@
 "use client";
 
+import { getUserInfo } from "@/services/auth.services";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdArrowForward, IoMdClose } from "react-icons/io";
 import ActiveLink from "../ui/ActiveLink";
@@ -10,11 +13,12 @@ import MyButton from "../ui/MyButton";
 
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
-  // Toggle function to handle the navbar's display
-  const handleNavToggle = () => {
-    setIsOpenMenu(!isOpenMenu);
-  };
+  const pathname = usePathname();
+
+  // get user info
+  const userInfo = getUserInfo();
 
   // Array containing navigation items
   const navItems = [
@@ -24,12 +28,15 @@ const Navbar = () => {
     { id: 4, text: "About", url: "/about" },
   ];
 
+  // Toggle function to handle the navbar's display
+  const handleNavToggle = () => {
+    setIsOpenMenu(!isOpenMenu);
+  };
+
   // Function to handle clicks outside of the navbar
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-
-      if (isOpenMenu && !document.getElementById("navbar")?.contains(target)) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setIsOpenMenu(false);
       }
     };
@@ -37,12 +44,20 @@ const Navbar = () => {
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     };
-  }, [isOpenMenu]);
+  }, []);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsOpenMenu(false);
+  }, [pathname]);
 
   return (
-    <div className="bg-dark text-white border-b border-border">
+    <div
+      className="relative bg-dark text-white border-b border-border"
+      ref={navRef}
+    >
       <Container className="py-5 lg:py-4">
         <div className="flex items-center justify-between">
           {/* logo section */}
@@ -56,10 +71,17 @@ const Navbar = () => {
           {/* Nav items section */}
           <ul className="hidden lg:flex space-x-3">
             {navItems.map((item) => (
-              <li key={item.id} className="">
-                <ActiveLink href={`${item.url}`}>{item.text}</ActiveLink>
+              <li key={item.id}>
+                <ActiveLink href={`${item.url}`} exact={item.id === 1}>
+                  {item.text}
+                </ActiveLink>
               </li>
             ))}
+            {userInfo?.role === "ADMIN" && (
+              <li>
+                <ActiveLink href="/admin">Dashboard</ActiveLink>
+              </li>
+            )}
           </ul>
 
           {/* Mobile Navigation Icon */}
@@ -72,31 +94,36 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu */}
-          <div
-            id="navbar"
-            className={`fixed lg:hidden top-0 left-0 w-[70%] h-screen bg-dark text-white ease-in-out duration-700 z-[999] p-[20px] ${
-              isOpenMenu ? "translate-x-0" : "-translate-x-full"
-            }`}
-          >
-            {/* logo and close toggle icon */}
-            <div className="my-5 flex justify-center items-center">
-              <div className="">
-                {/* <img src={Logo} className="w-40 rounded" alt="" /> */}
-                <h2>Rahman&apos;S</h2>
-              </div>
-            </div>
+          {/* Mobile menu with animation */}
+          <AnimatePresence>
+            {isOpenMenu && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="lg:hidden absolute top-[70px] left-0 w-full z-[999] bg-dark border-b border-border"
+              >
+                <div className="w-[92%] mx-auto py-5">
+                  <div className="flex flex-col space-y-4">
+                    {navItems.map((item) => (
+                      <li key={item.id} className="list-none">
+                        <ActiveLink href={item.url} exact={item.id === 1}>
+                          {item.text}
+                        </ActiveLink>
+                      </li>
+                    ))}
+                    {userInfo?.role === "ADMIN" && (
+                      <li className="list-none">
+                        <ActiveLink href="/admin">Dashboard</ActiveLink>
+                      </li>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-            {/* mobile nav items */}
-            <nav className="mx-10 mt-16">
-              <ul className="space-y-6">
-                {navItems.map((item) => (
-                  <li key={item.id} onClick={handleNavToggle}>
-                    <ActiveLink href={`${item.url}`}>{item.text}</ActiveLink>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
           {/* Mobile Navlinks end */}
 
           <div className="hidden lg:block">
