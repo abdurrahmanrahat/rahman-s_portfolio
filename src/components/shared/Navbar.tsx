@@ -7,9 +7,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdArrowForward, IoMdClose } from "react-icons/io";
-import ActiveLink from "../ui/ActiveLink";
-import Container from "../ui/Container";
-import MyButton from "../ui/MyButton";
+import ActiveLink from "../Ui/ActiveLink";
+import Container from "../Ui/Container";
+import MyButton from "../Ui/MyButton";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* logo section */}
           <Link href="/">
-            <span className="font-bold text-xl xl:text-2xl 2xl:text-3xl bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent ">
+            <span className="font-bold text-3xl xl:text-3xl 2xl:text-4xl bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent ">
               ARahman
             </span>
           </Link>

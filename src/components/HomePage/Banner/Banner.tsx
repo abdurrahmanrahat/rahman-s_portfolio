@@ -1,5 +1,5 @@
 import LottieShow from "@/components/ui/LottieShow";
-import TypeContent from "@/components/ui/TypeContent";
+import TypeContent from "@/components/Ui/TypeContent";
 import { LiaDownloadSolid } from "react-icons/lia";
 
 const Banner = () => {

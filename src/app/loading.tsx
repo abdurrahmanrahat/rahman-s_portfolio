@@ -1,4 +1,4 @@
-import { MyLoader } from "@/components/ui/MyLoader";
+import { MyLoader } from "@/components/Ui/MyLoader";
 
 const LoadingPage = () => {
   return (

@@ -1,4 +1,4 @@
-import ProjectDetailsButton from "@/components/ui/ProjectDetailsButton";
+import ProjectDetailsButton from "@/components/Ui/ProjectDetailsButton";
 import { TProject } from "@/types";
 import Image from "next/image";
 import { FaGithub, FaRegEye } from "react-icons/fa";
