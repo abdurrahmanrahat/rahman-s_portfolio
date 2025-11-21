@@ -10,6 +10,7 @@ import { IoMdArrowForward, IoMdClose } from "react-icons/io";
 import ActiveLink from "../ui/ActiveLink";
 import Container from "../ui/Container";
 import MyButton from "../ui/MyButton";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -55,11 +56,8 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <div
-      className="relative bg-dark text-white border-b border-border"
-      ref={navRef}
-    >
-      <Container className="py-5 lg:py-4">
+    <div className="relative border-b border-border" ref={navRef}>
+      <Container className="py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* logo section */}
           <Link href="/">
@@ -85,12 +83,16 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile Navigation Icon */}
-          <div onClick={handleNavToggle} className="block lg:hidden ">
-            {isOpenMenu ? (
-              <IoMdClose className="w-6 h-6" />
-            ) : (
-              <GiHamburgerMenu className="w-6 h-6" />
-            )}
+
+          <div className="flex items-center gap-2 md:gap-5 lg:hidden ">
+            <ThemeToggle />
+            <span onClick={handleNavToggle}>
+              {isOpenMenu ? (
+                <IoMdClose className="w-6 h-6" />
+              ) : (
+                <GiHamburgerMenu className="w-6 h-6" />
+              )}
+            </span>
           </div>
 
           {/* Mobile menu */}
@@ -102,7 +104,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className="lg:hidden absolute top-[70px] left-0 w-full z-999 bg-dark border-b border-border"
+                className="lg:hidden absolute top-[70px] left-0 w-full z-999 bg-white dark:bg-dark border-b border-border"
               >
                 <div className="w-[92%] mx-auto py-5">
                   <div className="flex flex-col space-y-4">
@@ -134,7 +136,8 @@ const Navbar = () => {
 
           {/* Mobile Navlinks end */}
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-4">
+            <ThemeToggle />
             <Link href={`/`}>
               <MyButton
                 mobileText="Resume"

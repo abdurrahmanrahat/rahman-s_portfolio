@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <Providers>
-        <body className="bg-dark text-white">
+        <body className="bg-white dark:bg-dark text-gray-900 dark:text-gray-100 transition-all duration-300">
           <div className="min-h-screen">{children}</div>
           <Toaster />
         </body>
