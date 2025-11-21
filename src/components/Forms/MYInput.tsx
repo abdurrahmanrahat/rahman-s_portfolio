@@ -19,7 +19,7 @@ const MYInput = ({ name, label, type = "text", placeholder }: TInputProps) => {
           {...field}
           type={type}
           placeholder={placeholder}
-          className="w-full px-3 py-3 bg-[#EEEEF2] rounded-md focus:outline-none"
+          className="w-full px-3 py-3 bg-[#EEEEF2] rounded-md focus:outline-hidden"
           required
         />
       )}

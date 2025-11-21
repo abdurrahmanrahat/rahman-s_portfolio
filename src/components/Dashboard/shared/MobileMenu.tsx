@@ -51,8 +51,8 @@ const MobileMenu = () => {
       <div
         className={
           toggle
-            ? "fixed lg:hidden top-0 left-0 w-[70%] h-full bg-[#ddd] ease-in-out duration-700 z-[999] p-[20px]"
-            : "ease-in-out duration-700 w-[70%] fixed top-0 bottom-0 left-[-100%] z-[999]"
+            ? "fixed lg:hidden top-0 left-0 w-[70%] h-full bg-[#ddd] ease-in-out duration-700 z-999 p-[20px]"
+            : "ease-in-out duration-700 w-[70%] fixed top-0 bottom-0 -left-full z-999"
         }
       >
         <div className="mb-5">

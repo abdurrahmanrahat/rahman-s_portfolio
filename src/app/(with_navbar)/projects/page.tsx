@@ -19,7 +19,7 @@ const ProjectsPage = async () => {
             Projects
           </span>
         </h3>
-        <i className="relative w-full h-[1px] bg-text-gray"></i>
+        <i className="relative w-full h-px bg-text-gray"></i>
       </div>
 
       {/* show projects */}

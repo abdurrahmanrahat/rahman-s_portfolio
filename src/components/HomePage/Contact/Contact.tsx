@@ -30,7 +30,7 @@ const Contact = () => {
               name="name"
               id="name"
               placeholder="Name*"
-              className="w-full px-3 py-2 focus:outline-none text-md border border-gray-200 bg-[#F2F2F2]"
+              className="w-full px-3 py-2 focus:outline-hidden text-md border border-gray-200 bg-[#F2F2F2]"
               required
             />
           </div>
@@ -41,7 +41,7 @@ const Contact = () => {
               name="email"
               id="email"
               placeholder="Email*"
-              className="w-full px-3 py-2 focus:outline-none text-md border border-gray-200 bg-[#F2F2F2]"
+              className="w-full px-3 py-2 focus:outline-hidden text-md border border-gray-200 bg-[#F2F2F2]"
               required
             />
           </div>
@@ -53,7 +53,7 @@ const Contact = () => {
               placeholder="Message*"
               cols={30}
               rows={3}
-              className="w-full px-3 py-2 focus:outline-none text-md border border-gray-200 bg-[#F2F2F2]"
+              className="w-full px-3 py-2 focus:outline-hidden text-md border border-gray-200 bg-[#F2F2F2]"
               required
             ></textarea>
           </div>

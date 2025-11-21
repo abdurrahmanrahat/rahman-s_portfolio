@@ -34,7 +34,7 @@ const BlogsPage = () => {
             Articles
           </span>
         </h3>
-        <i className="relative w-full h-[1px] bg-text-gray"></i>
+        <i className="relative w-full h-px bg-text-gray"></i>
       </div>
 
       {/* all cards */}
@@ -44,7 +44,7 @@ const BlogsPage = () => {
             <Link
               key={blog._id}
               href={`/blogs/${blog._id}`}
-              className="parent_card relative w-full h-auto block bg-[#fff] bg-opacity-10 rounded-[20px] overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-2 shadow-my-shadow"
+              className="parent_card relative w-full h-auto block bg-white bg-opacity-10 rounded-[20px] overflow-hidden col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-2 shadow-my-shadow"
             >
               <div className="main-banner relative w-full h-auto">
                 <Image
@@ -52,7 +52,7 @@ const BlogsPage = () => {
                   layout="fixed"
                   width={1000} // Set a large width for the initial rendering
                   height={230}
-                  className="relative w-full h-[230px] object-cover object-center rounded-[0px] filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
+                  className="relative w-full h-[230px] object-cover object-center rounded-none filter brightness-75 hover:brightness-50 transition-all duration-300 ease-in-out"
                   alt="Article Image"
                 />
               </div>

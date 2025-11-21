@@ -63,7 +63,7 @@ const Navbar = () => {
           {/* logo section */}
           <Link href="/">
             <div className="">
-              {/* <img src={Logo} className="w-48 rounded" alt="" /> */}
+              {/* <img src={Logo} className="w-48 rounded-sm" alt="" /> */}
               <h2 className="text-xl font-medium">Rahman&apos;S Portfolio</h2>
             </div>
           </Link>
@@ -102,7 +102,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className="lg:hidden absolute top-[70px] left-0 w-full z-[999] bg-dark border-b border-border"
+                className="lg:hidden absolute top-[70px] left-0 w-full z-999 bg-dark border-b border-border"
               >
                 <div className="w-[92%] mx-auto py-5">
                   <div className="flex flex-col space-y-4">

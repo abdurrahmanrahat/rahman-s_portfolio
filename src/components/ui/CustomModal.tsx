@@ -18,7 +18,7 @@ const CustomModal = ({ project }: { project: TProject }) => {
             src={project.projectImage}
             width={500}
             height={500}
-            className="w-full h-full cursor-pointer object-cover object-top hover:object-bottom transition-all duration-[4000ms]"
+            className="w-full h-full cursor-pointer object-cover object-top hover:object-bottom transition-all duration-4000"
             alt="image"
           />
         </div>

@@ -1,6 +1,37 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+    --font-Clash-display: ClashDisplay, sans-serif;
+
+    --shadow-my-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+
+    --color-primary: #d8fe00;
+    --color-dark: #080708;
+    --color-dark-shed: #151415;
+    --color-text: #292929;
+    --color-text-gray: #999999;
+    --color-border: #1f1f1f;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
+
+}
 
 * {
     margin: 0;
@@ -11,7 +42,7 @@
 
 
 
-.heading_text {
+/* .heading_text {
     @apply text-text text-[24px] md:text-[32px] lg:text-[36px] font-medium
 }
 
@@ -20,8 +51,8 @@
 }
 
 .custom_button {
-    @apply shadow-my-shadow font-semibold px-[20px] py-[12px] uppercase text-[16px] md:text-[17px] rounded-lg cursor-pointer border-b-2 border-primary
-}
+    @apply shadow-my-shadow font-semibold px-5 py-3 uppercase text-[16px] md:text-[17px] rounded-lg cursor-pointer border-b-2 border-primary
+} */
 
 /* articles image hover effect */
 .parent_card:hover .main-banner img {

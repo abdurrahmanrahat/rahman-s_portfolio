@@ -8,7 +8,7 @@ const AboutMe = () => {
       <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-[40px]">
         <div className="md:w-1/3">
           <div>
-            <Image src={MyPhoto} className="rounded" alt="rahat" />
+            <Image src={MyPhoto} className="rounded-sm" alt="rahat" />
           </div>
         </div>
         <div className="md:w-2/3 space-y-[20px]">
