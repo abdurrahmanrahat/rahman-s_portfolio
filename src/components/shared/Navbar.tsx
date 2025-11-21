@@ -26,6 +26,7 @@ const Navbar = () => {
     { id: 2, text: "Projects", url: "/projects" },
     { id: 3, text: "Blogs", url: "/blogs" },
     { id: 4, text: "About", url: "/about" },
+    { id: 5, text: "Contact", url: "/contact" },
   ];
 
   // Toggle function to handle the navbar's display
@@ -62,10 +63,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* logo section */}
           <Link href="/">
-            <div className="">
-              {/* <img src={Logo} className="w-48 rounded-sm" alt="" /> */}
-              <h2 className="text-xl font-medium">Rahman&apos;S Portfolio</h2>
-            </div>
+            <span className="font-bold text-xl xl:text-2xl 2xl:text-3xl bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent ">
+              ARahman
+            </span>
           </Link>
 
           {/* Nav items section */}
@@ -118,6 +118,14 @@ const Navbar = () => {
                         <ActiveLink href="/admin">Dashboard</ActiveLink>
                       </li>
                     )}
+                    <Link href={`/`}>
+                      <MyButton
+                        mobileText="Resume"
+                        desktopText="View Resume"
+                        isOutline={true}
+                        icon={<IoMdArrowForward />}
+                      />
+                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -127,11 +135,11 @@ const Navbar = () => {
           {/* Mobile Navlinks end */}
 
           <div className="hidden lg:block">
-            <Link href={`/contact`}>
+            <Link href={`/`}>
               <MyButton
                 mobileText="Resume"
                 desktopText="View Resume"
-                isOutline={false}
+                isOutline={true}
                 icon={<IoMdArrowForward />}
               />
             </Link>

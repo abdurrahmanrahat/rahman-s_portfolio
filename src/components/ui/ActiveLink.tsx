@@ -19,7 +19,7 @@ const ActiveLink = ({ href, exact = false, children }: TActiveLinkProps) => {
       href={href}
       className={`${
         active ? "text-dark bg-primary " : ""
-      } text-lg px-5 py-2 hover:bg-primary hover:text-dark rounded-full transition-all duration-300 font-medium`}
+      }text-base 2xl:text-lg px-5 py-2 hover:bg-primary hover:text-dark rounded-full transition-all duration-300 font-medium`}
     >
       {children}
     </Link>
