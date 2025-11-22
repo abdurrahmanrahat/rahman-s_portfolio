@@ -8,7 +8,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroBanner = () => {
-  const whatsAppNumber = "8801778119298";
+  const whatsAppNumber = "8801820897892";
   const baseUrl = "https://api.whatsapp.com/send/";
   const encodedMessage = "Hi there, is there anyone to assist me?";
   const whatsAppLink = `${baseUrl}?phone=${whatsAppNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
@@ -69,7 +69,7 @@ const HeroBanner = () => {
             </p>
 
             {/* social icons + hire button */}
-            <div className="flex gap-[6px] md:gap-2 justify-between md:justify-start">
+            <div className="flex gap-1.5 md:gap-2 justify-between md:justify-start">
               <Link
                 href={whatsAppLink}
                 target="_blank"
