@@ -21,7 +21,7 @@ const ProjectLists = () => {
         {[{ name: "All" }, ...categoriesData].map((category, index) => (
           <button
             key={index}
-            className={`px-4 py-[6px] md:px-5 md:py-2 2xl:px-6 2xl:py-[10px] border border-gray-800 hover:bg-primary text-sm 2xl:text-base hover:text-dark rounded-full transition-all duration-300 [word-spacing:2px] md:[word-spacing:4px] cursor-pointer ${
+            className={`px-4 py-1.5 md:px-5 md:py-2 2xl:px-6 2xl:py-2.5 border border-gray-800 hover:bg-primary text-sm 2xl:text-base hover:text-dark rounded-full transition-all duration-300 [word-spacing:2px] md:[word-spacing:4px] cursor-pointer ${
               selected === category.name ? "text-dark bg-primary" : ""
             }`}
             onClick={() => setSelected(category.name)}
