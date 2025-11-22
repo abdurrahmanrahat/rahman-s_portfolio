@@ -1,26 +1,41 @@
-export const categoriesData = [
+export const projectsData = [
   {
-    name: "E-commerce",
+    name: "Gadgetoria Hub",
+    slug: "gadgetoria-hub",
+    image: "/images/projects/gadgetoria.png",
+    category: "E-commerce",
+    description:
+      "<p>Gadgetoria is a complete e-commerce platform offering a fast, modern, and intuitive shopping experience. It includes a full storefront for customers and an advanced admin dashboard for managing products, categories, orders, reviews, and users. The system is designed to be scalable, clean, and efficient for real-world business use.</p><p></p><h3>Home Page & Shopping Experience</h3><p>The homepage features a responsive navbar with search, cart, and wishlist, along with a dynamic banner slider, top categories, and best-selling product sections. Users can easily navigate and explore highlighted deals and categories.</p><p></p><h3>Advanced Product Browsing</h3><p>The products page includes real-time search, category filters, price range selection, sorting tools, and smooth pagination. These features ensure users quickly find the products that match their needs.</p><p></p><h3>Detailed Product View</h3><p>Each product page offers a gallery preview, quantity selection, Add to Cart, Add to Wishlist, and Buy Now options. It also includes customer reviews, rating summaries, and recommendations for related or best-selling products.</p><p></p><h3>Cart, Checkout & Order Flow</h3><p>The platform supports a complete cart system, coupon-enabled checkout, and an order success page. Users can adjust cart items, manage wishlist entries, and finish purchases seamlessly.</p><p></p><h3>Authentication & Authorization</h3><p>The application includes user login, signup, and role-based access control, ensuring proper separation between admin and regular user capabilities.</p><p></p><h3>User Profile & Personalization</h3><p>Users can view and edit their profile information and enjoy theme customization through a light/dark mode toggle.</p><p></p><h3>Admin Dashboard & Management Tools</h3><p>The admin dashboard provides statistical overviews, category-wise charts, and order status charts. Admins can manage categories, products, orders, and reviews through tables with search, filters, pagination, and full CRUD actions.</p><p></p><h3>Complete Store Management</h3><p>Admin features include adding categories with subcategories via modal, editing products through detailed modals, approving reviews, updating order statuses, and deleting items when necessary.</p><p></p><h3>Technology Stack</h3><p>The platform is built using Next.js and Shadcn UI on the frontend, with Node.js and Express.js powering the backend, and MongoDB with Mongoose handling database operations.</p>",
+    viewUrl: "https://gadgetoria.vercel.app",
+    githubFrontendUrl:
+      "https://github.com/abdurrahmanrahat/gadgetoria-frontend",
+    githubBackendUrl: "https://github.com/abdurrahmanrahat/gadgetoria-backend",
+    tags: ["next.js", "shadcn", "node.js", "express.js", "mongodb"],
   },
   {
-    name: "Agency",
+    name: "Agency Cope",
+    slug: "agency-cope",
+    image: "/images/projects/agency-cope.png",
+    category: "Agency",
+    description:
+      "<p>Agency Cope is a modern creative digital agency offering branding, web development, content creation, motion graphics, and AI-powered automation solutions. The platform showcases a professional online presence with structured pages, smooth animations, and a visually engaging design built to reflect creativity and business excellence.</p><p></p><h3>Home Page Experience</h3><p>The homepage includes a hero banner that highlights the agency’s value, followed by a marquee displaying collaborations with top brands. It also features service highlights, team members, featured projects, pricing plans, workflow overview, client testimonials, and a global office location section that builds trust and brand credibility.</p><p></p><h3>Services Page</h3><p>The services page contains a clean banner section followed by detailed service cards. Each service includes an expandable modal powered by Email.js, allowing users to inquire or request services directly. This delivers an interactive and user-friendly experience.</p><p></p><h3>Portfolio Page</h3><p>The portfolio page presents all completed projects with a category-based filter system. It allows users to explore branding, graphic design, content creation, website designs, and other creative works in an organized grid layout.</p><p></p><h3>Contact Page</h3><p>The contact page includes a dedicated banner and integrates cal.com, allowing users to schedule meetings effortlessly. This provides a streamlined communication channel for clients and leads.</p><p></p><h3>About Page</h3><p>The about page introduces the vision and mission of Agency Cope, followed by agency details, history, and work philosophy. It also showcases team members to build authenticity and client confidence.</p><p></p><h3>Additional Pages</h3><p>The platform includes essential pages such as FAQs, Privacy Policy, Refund Policy, Terms and Conditions, and a dedicated About CEO page — ensuring transparency, professionalism, and complete brand representation.</p><p></p><h3>Technology Stack</h3><p>The website is built using React.js for component-driven UI, Tailwind CSS for modern styling, and Framer Motion for smooth, interactive animations throughout the interface.</p>",
+    viewUrl: "https://agencycope.com",
+    tags: ["react.js", "tailwind css", "framer-motion"],
   },
   {
-    name: "Resort",
-  },
-  {
-    name: "Education",
+    name: "Aquavista Resort",
+    slug: "aquavista-resort",
+    image: "/images/projects/aquavista.png",
+    category: "Resort",
+    description:
+      "<p>AquaVista Resort is a luxury riverside resort and real estate destination designed to offer premium lifestyle experiences, secure investment opportunities, and natural riverside serenity. Located beside the Padma River, the project focuses on comfort, safety, architecture, and long-term ownership benefits. The website presents all resort details, amenities, gallery visuals, investment plans, and contact options in a highly engaging and professional layout.</p><p></p><h3>Home Page</h3><p>The home page includes a dynamic video banner, resort highlights, location advantages, lifestyle visuals, and clearly presented ownership benefits. A call-to-action section encourages users to explore investment plans or make inquiries.</p><p></p><h3>About Page</h3><p>The about page explains the resort's story, vision, mission, and the peaceful Padma riverside lifestyle. It also includes erosion-safe zone data and technical safety explanations to build confidence for investors.</p><p></p><h3>Facilities & Lifestyle Page</h3><p>This page showcases the complete list of resort amenities including the swimming pool, spa, banquet hall, gardens, sports area, kids zone, lifestyle spaces, and more. Each facility is presented with images and detailed descriptions to highlight the comfort and luxury offered to residents and visitors.</p><p></p><h3>Investment Plans Page</h3><p>The investment page explains ownership types, financial benefits, expected ROI, long-term profitability, maintenance rules, FAQs, and an inquiry CTA. It is designed to help potential buyers understand the full value of investing in AquaVista Resort.</p><p></p><h3>Gallery Page</h3><p>The gallery includes photos and video content showcasing the resort architecture, riverfront views, drone shots, interior areas, landscape design, and the overall natural environment.</p><p></p><h3>Contact Page</h3><p>The contact page contains a modern form where users can submit inquiries. Using EmailJS integration, every submitted form instantly sends an email to the project owner. Additionally, all leads are stored and displayed inside the admin dashboard. The page also includes direct phone/WhatsApp options and a Google Map location.</p><p></p><h3>Facilities Details Page</h3><p>A dedicated page for in-depth explanations of each facility, supported with high-quality images, video embeds, and descriptive text.</p><p></p><h3>Lead Collection & Admin Dashboard</h3><p>The system includes an admin dashboard where all collected leads from the contact form are automatically stored and displayed with details such as name, email, phone, and message. Admins can view, manage, and track inquiries efficiently. EmailJS integration ensures that every new lead also triggers a notification email to the resort owner immediately.</p>",
+    viewUrl: "https://aquavistabd.vercel.app",
+    tags: ["next.js", "shadcn", "tailwind-css", "express.js", "mongodb"],
   },
 ];
 
-export const projectsData = [
+const tagsData = [
   {
-    name: "",
-    image: "",
-    category: "",
-    description: "",
-    viewUrl: "",
-    githubFrontendUrl: "",
-    githubBackendUrl: "",
+    value: "react.js",
   },
 ];

@@ -22,7 +22,7 @@ const Stats = () => {
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="bg-[#ececec] dark:bg-[#0b0b0b] p-6 py-8 rounded-xl"
+          className="bg-white-shed dark:bg-dark-shed p-6 py-8 rounded-xl"
         >
           <p className="text-3xl md:text-4xl lg:text-5xl font-medium">
             {stat.value}

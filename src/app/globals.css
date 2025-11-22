@@ -9,12 +9,12 @@
     --shadow-my-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
 
     --color-primary: #c2e500;
-    --color-primary-white: #c2e500;
     --color-dark: #080708;
-    --color-dark-shed: #151415;
+    --color-dark-shed: #0b0b0b;
+    --color-white-shed: #ececec;
     --color-text: #292929;
     --color-text-gray: #999999;
-    /* --color-border: #1f1f1f; */
+    --shadow-cardDarkShadow: rgba(60, 80, 111, 0.09) -2px 4px 20px 0px;
 }
 
 @layer base {}
@@ -37,7 +37,7 @@
 
     /* Borders */
     .border-border {
-        @apply border-gray-200 dark:border-gray-700;
+        @apply border-gray-200 dark:border-[#1f1f1f];
     }
 
 
